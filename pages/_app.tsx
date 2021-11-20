@@ -4,6 +4,12 @@ import type { AppProps } from 'next/app'
 import Amplify from '@aws-amplify/core'
 import Auth from '@aws-amplify/auth'
 
+// start the mocking conditionally.
+if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {
+  const { worker } = require('../mocks/browser')
+  worker.start()
+}
+
 Amplify.configure({
   Auth: {
     // region: 'eu-central-1', //! Konfiguration

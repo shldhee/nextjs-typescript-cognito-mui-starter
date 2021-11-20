@@ -21,6 +21,12 @@
       "@/components/*": ["components/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/Practice/Mocking.jsx",
+    "components/Practice/Hooks.jsx"
+  ],
   "exclude": ["node_modules"]
 }
